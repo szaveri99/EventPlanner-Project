@@ -6,9 +6,7 @@ import AppRoutes from "./routes/index";
 const App = () => {
   return (
     <Router>
-      <MainLayout>
         <AppRoutes />
-      </MainLayout>
     </Router>
   );
 };

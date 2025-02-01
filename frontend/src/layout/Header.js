@@ -4,7 +4,7 @@ import { FaCalendarCheck } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm" style={{position:'absolute',top:'0',right:'0',left:'0',zIndex:'99'}}>
       <div className="container-fluid px-4">
         <div className="d-flex align-items-center">
           <Link

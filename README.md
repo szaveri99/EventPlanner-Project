@@ -1,3 +1,4 @@
 # EventPlanner-Project
 
-Node version - 18
+#### Node version - 18 
+#### React Version - 18
