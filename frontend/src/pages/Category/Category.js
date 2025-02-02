@@ -5,7 +5,7 @@ import categoryItems from './CategoryItems';
 
 const Category = () => {
   return (
-    <section className="container py-5">
+    <section className="container py-5 " style={{marginTop:'100px'}}>
       <div className="text-center mb-5">
         <h2 className="fw-bold display-6 mb-3 gradient-text">
           From Concept to Celebration,
