@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ForgotPasswordModal from "../../component/ForgotPasswordModal";
+import {Link} from 'react-router-dom';
 
 function Login() {
     const [showModal, setShowModal] = useState(false);
@@ -49,7 +50,7 @@ function Login() {
                         <button type="submit" className="btn btn-secondary w-100">Login</button>
                     </form>
 
-                    <p className="mt-3">Don't have an account? <a href="#" className="text-decoration-none">Sign up</a></p>
+                    <p className="mt-3">Don't have an account? <Link to="/signup" className="text-decoration-none">Sign up</Link></p>
                 </div>
             </div>
 

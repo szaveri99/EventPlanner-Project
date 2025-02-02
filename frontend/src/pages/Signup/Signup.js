@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VendorForm from "../../component/VendorForm";
 import UserForm from "../../component/UserForm";
+import {Link} from 'react-router-dom';
 
 function SignUp() {
   const [role, setRole] = useState("user");
@@ -64,7 +65,7 @@ function SignUp() {
           </form>
 
           {/* Login Link */}
-          <p className="mt-3">Already have an account? <a href="#">Log In</a></p>
+          <p className="mt-3">Already have an account? <Link to="/login">Log In</Link></p>
         </div>
       </div>
 
