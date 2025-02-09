@@ -76,6 +76,7 @@ const ContactUs = () => {
               <div className="mb-3">
                 <textarea
                   className="form-control"
+
                   rows={2}
                   placeholder="Your Message..."
                   required

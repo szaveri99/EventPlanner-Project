@@ -1,9 +1,11 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import { ArrowRight } from "react-bootstrap-icons";
 import { CategoryCardProps } from "../types/CategoryCard.types";
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ feature, index }) => {
+
   return (
     <div key={index} className="col-12 col-md-6 col-lg-4 shadow">
       <div className="card h-100 border-0 shadow-lg-hover card-hover-effect">

@@ -37,16 +37,19 @@ function SignUp() {
             <button
               className={`btn ${role === "vendor" ? "btn-dark" : "btn-light"}`}
               onClick={() => setRole("vendor")}
+
               style={{
                 border: "1px solid rgba(229,229,229,1)",
                 borderRadius: "5px",
               }}
+
             >
               I'm a vendor
             </button>
             <button
               className={`btn ${role === "user" ? "btn-dark" : "btn-light"}`}
               onClick={() => setRole("user")}
+
               style={{
                 border: "1px solid rgba(229,229,229,1)",
                 borderRadius: "5px",
@@ -59,6 +62,7 @@ function SignUp() {
           {/* Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="w-100">
             {role === "vendor" ? (
+
               <VendorForm
                 register={register as UseFormRegister<VendorFormData>}
                 errors={errors as FieldErrors<VendorFormData>}
@@ -68,6 +72,7 @@ function SignUp() {
                 register={register as UseFormRegister<BaseFormData>}
                 errors={errors as FieldErrors<BaseFormData>}
               />
+
             )}
 
             {/* Checkbox */}
@@ -95,10 +100,12 @@ function SignUp() {
           <p className="mt-3">
             Already have an account? <Link to="/login">Log In</Link>
           </p>
+
         </div>
       </div>
 
       {/* Right Side Branding */}
+
       <div
         className="col-md-6 d-flex align-items-center justify-content-center text-white bg-image"
         style={{
@@ -117,6 +124,7 @@ function SignUp() {
             Welcome to EventPlanner Pro, Simplifying event planning, handling
             every detail with ease.
           </p>
+
         </div>
       </div>
     </div>

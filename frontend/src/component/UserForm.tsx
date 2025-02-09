@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FormProps, BaseFormData } from "../types/FormTypes.types";
 
 const UserForm: React.FC<FormProps<BaseFormData>> = ({ register, errors }) => {
