@@ -28,7 +28,7 @@ function ForgotPasswordModal({ show, handleClose }) {
                             placeholder="Type your email"
                             {...register("email", { required: "Email is required", pattern: { value: /\S+@\S+\.\S+/, message: "Enter a valid email" } })}
                         />
-                        {errors.email && <p className="text-danger">{errors.email.message}</p>}
+                        {errors.email && <p className="text-danger">{errors?.email?.message}</p>}
 
                         <button type="submit" className="btn btn-secondary w-100">Send email</button>
                     </form>
