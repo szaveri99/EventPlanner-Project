@@ -76,7 +76,8 @@ const ContactUs = () => {
               <div className="mb-3">
                 <textarea
                   className="form-control"
-                  rows="3"
+
+                  rows={2}
                   placeholder="Your Message..."
                   required
                 ></textarea>
@@ -100,7 +101,7 @@ const ContactUs = () => {
               width="100%"
               height="300"
               style={{ border: 0 }}
-              allowFullScreen="true"
+              allowFullScreen={true}
               loading="lazy"
             ></iframe>
           </div>

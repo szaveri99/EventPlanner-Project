@@ -12,32 +12,26 @@ function AppRoutes() {
   return useRoutes([
     {
       path: ROUTES.HOME,
-      exact: true,
       element:<MainLayout><Home /></MainLayout> ,
     },
     {
       path: ROUTES.EVENT_CATEGORY,
-      exact: true,
       element: <MainLayout><Category /></MainLayout>,
     },
     {
       path: ROUTES.CONTACT,
-      exact: true,
       element: <MainLayout><Contact /></MainLayout>,
     },
     {
       path: ROUTES.ABOUT,
-      exact: true,
       element: <MainLayout><About /></MainLayout>,
     },
     {
       path: ROUTES.SIGNUP,
-      exact: true,
       element: <Signup />,
     },
     {
       path: ROUTES.LOGIN,
-      exact: true,
       element: <Login />,
     },
   ]);
