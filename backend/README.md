@@ -48,7 +48,7 @@ $ npm run start:prod
 ## Nest cli
 ```bash
 # create new module
-$ nest g resources
+$ nest generate resource
 ```
 
 ## Run Migration
