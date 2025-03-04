@@ -3,7 +3,7 @@ import React from "react";
 export interface CategoryCardProps {
   feature: {
     title: string;
-    icon: React.ReactNode;
+    img: string  ;
     description: string;
   };
   index: number;
