@@ -44,8 +44,8 @@ export const EventCarousel = () => {
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                     className="mySwiper"
                 >{items.map((item, index) => (
-                    <SwiperSlide>
-                        <div key={index} className="slider-item">
+                    <SwiperSlide key={index}>
+                        <div className="slider-item">
                             <Card className="shadow-sm border-0 text-center p-3">
                                 <Card.Img variant="top" src="music-event.jpg" className="mx-auto" />
                                 <Card.Body>
@@ -54,7 +54,6 @@ export const EventCarousel = () => {
                                 </Card.Body>
                             </Card>
                         </div>
-
                     </SwiperSlide>
                 ))}
                 </Swiper>
