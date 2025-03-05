@@ -1,9 +1,9 @@
-import venueImg from "../../assets/venue.png";
-import eventPlanningImg from "../../assets/event-planning.png";
-import cateringImg from "../../assets/catering.png";
-import photographyImg from "../../assets/photography.png";
-import entertainmentImg from "../../assets/entertainment.png";
-import decorFlowImg from "../../assets/decor-flowe.png";
+import venueImg from "assets/venue.png";
+import eventPlanningImg from "assets/event-planning.png";
+import cateringImg from "assets/catering.png";
+import photographyImg from "assets/photography.png";
+import entertainmentImg from "assets/entertainment.png";
+import decorFlowImg from "assets/decor-flowe.png";
 
 const categoryItems = [
   {
