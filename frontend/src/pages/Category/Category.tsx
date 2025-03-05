@@ -52,7 +52,7 @@ const Category = () => {
 
       <div className="row g-4">
         {categoryItems.map((feature, index) => (
-          <CategoryCard feature={feature} index={index} />
+          <CategoryCard feature={feature} index={index} key={index} />
         ))}
       </div>
     </section>
