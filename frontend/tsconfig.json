@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "prettier", "trusted-types"],
     "target": "ES6",
     "module": "ESNext",
     "lib": [
