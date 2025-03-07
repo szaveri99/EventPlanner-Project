@@ -1,5 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Vendor } from 'src/vendors/entities/vendor.entity';
+import { Review } from 'src/reviews/entities/review.entity';
+
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
@@ -19,4 +21,7 @@ export class User {
 
     @OneToMany(() => Vendor, (vendor) => vendor.user) // A user can have multiple vendors
     vendors: Vendor[];
+
+    @OneToMany(() => Review, (review) => review.user)
+    reviews: Review[];
 }

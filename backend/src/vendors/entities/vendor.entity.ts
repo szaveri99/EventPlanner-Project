@@ -1,5 +1,7 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany } from 'typeorm';
 import { User } from 'src/users/entities/user.entity'
+import { PlaceDetail } from 'src/place_details/entities/place_detail.entity';
+
 @Entity()
 export class Vendor {
     @PrimaryGeneratedColumn()
@@ -22,4 +24,7 @@ export class Vendor {
 
     @ManyToOne(() => User, (user) => user.vendors, { nullable: true, onDelete: 'SET NULL' })
     user: User | null;
+
+    @OneToMany(() => PlaceDetail, (place) => place.vendor)
+    places: PlaceDetail[];
 }
