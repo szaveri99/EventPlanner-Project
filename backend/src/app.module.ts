@@ -5,6 +5,8 @@ import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { VendorsModule } from './vendors/vendors.module';
+import { PlaceDetailsModule } from './place_details/place_details.module';
+import { ReviewsModule } from './reviews/reviews.module';
 
 @Module({
   imports: [
@@ -23,7 +25,9 @@ import { VendorsModule } from './vendors/vendors.module';
       }),
     }),
     UsersModule,
-    VendorsModule],
+    VendorsModule,
+    PlaceDetailsModule,
+    ReviewsModule],
   controllers: [AppController],
   providers: [AppService],
 })
