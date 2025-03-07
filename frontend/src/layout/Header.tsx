@@ -1,9 +1,112 @@
+// import { Link } from "react-router-dom";
+// import { FaCalendarCheck } from "react-icons/fa";
+
+// const Header = () => {
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm" style={{position:'absolute',top:'0',right:'0',left:'0',zIndex:'99'}}>
+//       <div className="container-fluid px-4">
+//         <div className="d-flex align-items-center">
+//           <Link
+//             to="/"
+//             className="navbar-brand fw-bold text-primary d-flex align-items-center ms-3"
+//           >
+//             <img
+//               src="./logo.webp"
+//               alt="Logo"
+//               className="me-2"
+//               width={50}
+//               height={50}
+//             />
+//           </Link>
+
+//           <button
+//             className="navbar-toggler"
+//             type="button"
+//             data-bs-toggle="collapse"
+//             data-bs-target="#navbarNav"
+//             aria-controls="navbarNav"
+//             aria-expanded="false"
+//             aria-label="Toggle navigation"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//         </div>
+
+//         <div className="collapse navbar-collapse" id="navbarNav">
+//           <ul className="navbar-nav me-auto ms-3">
+//             <li className="nav-item">
+//               <Link to="/" className="nav-link text-dark fw-medium">
+//                 Home
+//               </Link>
+//             </li>
+//             <li className="nav-item">
+//               <Link to="/about" className="nav-link text-dark fw-medium">
+//                 About
+//               </Link>
+//             </li>
+//             <li className="nav-item">
+//               <Link
+//                 to="/event-category"
+//                 className="nav-link text-dark fw-medium"
+//               >
+//                 Event Categories
+//               </Link>
+//             </li>
+//             <li className="nav-item">
+//               <Link to="/contact" className="nav-link text-dark fw-medium">
+//                 Contact / Support
+//               </Link>
+//             </li>
+//           </ul>
+
+//           <div className="d-flex flex-column align-items-center gap-2 ms-auto">
+//             <div className="d-flex align-items-center gap-2">
+//               <span className="text-muted small">
+//                 <FaCalendarCheck className="me-1" /> Register Your Business
+//               </span>
+//             </div>
+//             <div className="d-flex align-items-center gap-2">
+//               <Link to="/signup" className="btn btn-outline-primary btn-sm">
+//                 Sign up
+//               </Link>
+//               <Link to="/login" className="btn btn-primary btn-sm">
+//                 Sign in
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Header;
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCalendarCheck } from "react-icons/fa";
+import { Navbar } from "react-bootstrap";
 
 const Header = () => {
+  const [expanded, setExpended] = useState<boolean>(false);
+
+  const closeNav = () => setExpended(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm" style={{position:'absolute',top:'0',right:'0',left:'0',zIndex:'99'}}>
+    <Navbar
+      expand="lg"
+      bg="light"
+      variant="light"
+      expanded={expanded}
+      className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm"
+      style={{
+        position: "absolute",
+        top: "0",
+        right: "0",
+        left: "0",
+        zIndex: "99",
+      }}
+    >
       <div className="container-fluid px-4">
         <div className="d-flex align-items-center">
           <Link
@@ -18,33 +121,25 @@ const Header = () => {
               height={50}
             />
           </Link>
-
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
         </div>
+        <Navbar.Toggle
+          aria-controls="navbarNav"
+          onClick={() => setExpended(expanded ? false : true)}
+        />
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <Navbar.Collapse className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto ms-3">
-            <li className="nav-item">
+            <li onClick={closeNav} className="nav-item">
               <Link to="/" className="nav-link text-dark fw-medium">
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li onClick={closeNav} className="nav-item">
               <Link to="/about" className="nav-link text-dark fw-medium">
                 About
               </Link>
             </li>
-            <li className="nav-item">
+            <li onClick={closeNav} className="nav-item">
               <Link
                 to="/event-category"
                 className="nav-link text-dark fw-medium"
@@ -52,7 +147,7 @@ const Header = () => {
                 Event Categories
               </Link>
             </li>
-            <li className="nav-item">
+            <li onClick={closeNav} className="nav-item">
               <Link to="/contact" className="nav-link text-dark fw-medium">
                 Contact / Support
               </Link>
@@ -66,17 +161,25 @@ const Header = () => {
               </span>
             </div>
             <div className="d-flex align-items-center gap-2">
-              <Link to="/signup" className="btn btn-outline-primary btn-sm">
+              <Link
+                onClick={closeNav}
+                to="/signup"
+                className="btn btn-outline-primary btn-sm"
+              >
                 Sign up
               </Link>
-              <Link to="/login" className="btn btn-primary btn-sm">
+              <Link
+                onClick={closeNav}
+                to="/login"
+                className="btn btn-primary btn-sm"
+              >
                 Sign in
               </Link>
             </div>
           </div>
-        </div>
+        </Navbar.Collapse>
       </div>
-    </nav>
+    </Navbar>
   );
 };
 
