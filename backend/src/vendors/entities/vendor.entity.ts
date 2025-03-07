@@ -1,3 +1,4 @@
+
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany } from 'typeorm';
 import { User } from 'src/users/entities/user.entity'
 import { PlaceDetail } from 'src/place_details/entities/place_detail.entity';
@@ -27,4 +28,5 @@ export class Vendor {
 
     @OneToMany(() => PlaceDetail, (place) => place.vendor)
     places: PlaceDetail[];
+
 }
