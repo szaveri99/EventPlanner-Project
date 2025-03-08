@@ -1,13 +1,8 @@
 {
   "compilerOptions": {
-    "types": ["node", "prettier", "trusted-types"],
-    "target": "ES6",
+    "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "esModuleInterop": true,
     "strict": true,
     "moduleResolution": "node",
@@ -16,16 +11,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "component/*": [
-        "./component/*"
-      ]
+      "component/*": ["./component/*"]
     },
     "noImplicitAny": false
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
