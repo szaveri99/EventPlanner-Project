@@ -82,10 +82,12 @@
 
 // export default Header;
 
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCalendarCheck } from "react-icons/fa6";
 import { Navbar } from "react-bootstrap";
+import * as Icons from "react-icons/fa";
+console.log(Icons);
 
 const Header = () => {
   const [expanded, setExpended] = useState<boolean>(false);
