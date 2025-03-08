@@ -84,7 +84,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaCalendarCheck } from "react-icons/fa";
+import { FaCalendarCheck } from "react-icons/fa6";
 import { Navbar } from "react-bootstrap";
 
 const Header = () => {
