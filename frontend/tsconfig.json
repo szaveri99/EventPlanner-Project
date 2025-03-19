@@ -7,6 +7,7 @@
     "strict": true,
     "moduleResolution": "node",
     "allowJs": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "skipDefaultLibCheck": true,
     "baseUrl": "./src",
@@ -16,5 +17,5 @@
     "noImplicitAny": false
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules","src/dammyData.js"]
 }

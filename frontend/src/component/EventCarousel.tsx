@@ -5,17 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { Container, Card } from "react-bootstrap";
+import { items } from '../dammyData'
 
 import '../App.css'
-const items = [
-    { title: "Corporate", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-];
+
 
 export const EventCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
