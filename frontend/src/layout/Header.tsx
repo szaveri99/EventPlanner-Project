@@ -100,16 +100,18 @@ const Header = () => {
       bg="light"
       variant="light"
       expanded={expanded}
-      className="navbar navbar-expand-lg navbar-light bg-light py-2 shadow-sm"
+      className="navbar navbar-expand-lg navbar-light bg-light"
       style={{
-        position: "absolute",
+        position: "fixed",
         top: "0",
         right: "0",
         left: "0",
+        padding : '0 0 5px 0 ',
         zIndex: "99",
+        boxShadow : '0 4px 3px rgba(0,0,0,0.4)'
       }}
     >
-      <div className="container-fluid px-4">
+      <div className="container-fluid px-2">
         <div className="d-flex align-items-center">
           <Link
             to="/"
@@ -129,8 +131,8 @@ const Header = () => {
           onClick={() => setExpended(expanded ? false : true)}
         />
 
-        <Navbar.Collapse className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto ms-3">
+        <Navbar.Collapse className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav me-auto ms-3 ">
             <li onClick={closeNav} className="nav-item">
               <Link to="/" className="nav-link text-dark fw-medium">
                 Home
