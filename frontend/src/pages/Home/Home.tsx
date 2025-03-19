@@ -3,33 +3,15 @@ import { Carousel, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import { EventCarousel } from '../../component/EventCarousel'
+import {homeEvents} from '../../dammyData' 
 
-const events = [
-  {
-    id: 1,
-    title: "Music Festival",
-    description: "Join us for the biggest music festival of the year!",
-    image: "music-event.jpg",
-  },
-  {
-    id: 2,
-    title: "Tech Conference",
-    description: "Learn from the best in the tech industry.",
-    image: "event-themes-featured.jpg",
-  },
-  {
-    id: 3,
-    title: "Food Expo",
-    description: "Experience the finest cuisines from around the world.",
-    image: "wedding-catering.jpg",
-  },
-];
+
 const Home = () => {
   return (
     <div className="App">
       {/* Carousel Section */}
       <Carousel>
-        {events.map((event) => (
+        {homeEvents.map((event) => (
           <Carousel.Item key={event.id}>
             <div className="carousel-image-container">
               <img
@@ -49,9 +31,9 @@ const Home = () => {
 
       {/* Event Cards Section */}
       <Container className="mt-5">
-        <h2 className="text-center mb-4">Upcoming Events</h2>
+        <h2 className="text-center mb-4">Upcoming homeEvents</h2>
         <Row>
-          {events.map((event) => (
+          {homeEvents.map((event) => (
             <Col key={event.id} md={4} className="mb-4 hover" >
               <Card style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.2)" }}>
                 <div className="card-image-container" >
