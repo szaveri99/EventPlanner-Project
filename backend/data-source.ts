@@ -1,3 +1,4 @@
+import "reflect-metadata";
 const { DataSource } = require('typeorm');
 import { configDotenv } from "dotenv";
 
