@@ -3,38 +3,13 @@ import TeamSection from "./TeamMembers";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import {events} from '../../dammyData' 
+import {stats} from '../../dammyData' 
+
+
 import "./About.css";
 
-const events = [
-  {
-    title: "Our Vision",
-    image:
-      "https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/5-2.jpg",
-    description:
-      "Aorem ipsum dolor sit amet consectetur elit sed tempor incididunt ut labore etua dolore mag aliqua minim veniam quis nostrud exercitation",
-  },
-  {
-    title: "Our Approach",
-    image:
-      "https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/6-2.jpg",
-    description:
-      "Aorem ipsum dolor sit amet consectetur elit sed tempor incididunt ut labore etua dolore mag aliqua minim veniam quis nostrud exercitation",
-  },
-  {
-    title: "Our Goals",
-    image:
-      "https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/7-2.jpg",
-    description:
-      "Aorem ipsum dolor sit amet consectetur elit sed tempor incididunt ut labore etua dolore mag aliqua minim veniam quis nostrud exercitation",
-  },
-];
 
-const stats = [
-  { number: 320, label: "Featured Events" },
-  { number: 156, label: "Loyal Customers" },
-  { number: 594, label: "Good Comments" },
-  { number: 167, label: "Trophies Won" },
-];
 
 const About = () => {
   const { ref, inView } = useInView({
