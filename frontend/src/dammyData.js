@@ -1,4 +1,4 @@
-// event crousal data
+// event crousal data ==================================
 export const items = [
     { title: "Corporate", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
     { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
