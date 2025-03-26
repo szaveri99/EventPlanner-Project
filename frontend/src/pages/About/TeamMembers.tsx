@@ -1,32 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const teamMembers = [
-  {
-    name: "Ava Taylor",
-    role: "Supervisor",
-    image: "https://pub-34fffd0afaaa4589b510c03a48ff88ac.r2.dev/photos2Results/home/female/6.jpeg", 
-    description: "Lorem ipsum dolor sit ame adipiscing elit sed do eiusmod tempor incididunt labore dolor magna",
-  },
-  {
-    name: "Kethy Hilton",
-    role: "Events Manager",
-    image: "https://pub-34fffd0afaaa4589b510c03a48ff88ac.r2.dev/photos2Results/home/female/6.jpeg",
-    description: "Lorem ipsum dolor sit ame adipiscing elit sed do eiusmod tempor incididunt labore dolor magna",
-  },
-  {
-    name: "Charles Hasman",
-    role: "Founder & Director",
-    image: "https://pub-34fffd0afaaa4589b510c03a48ff88ac.r2.dev/photos2Results/home/male/7.jpeg",
-    description: "Lorem ipsum dolor sit ame adipiscing elit sed do eiusmod tempor incididunt labore dolor magna",
-  },
-  {
-    name: "Anna Sydney",
-    role: "Events Manager",
-    image: "https://pub-34fffd0afaaa4589b510c03a48ff88ac.r2.dev/photos2Results/home/male/10.jpeg",
-    description: "Lorem ipsum dolor sit ame adipiscing elit sed do eiusmod tempor incididunt labore dolor magna",
-  },
-];
+import { teamMembers} from '../../dammyData'
 
 const TeamSection = () => {
   return (

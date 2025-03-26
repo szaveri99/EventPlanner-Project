@@ -5,17 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { Container, Card } from "react-bootstrap";
+import { items } from '../dammyData'
 
 import '../App.css'
-const items = [
-    { title: "Corporate", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Weddings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-    { title: "Gatherings", text: "Lorem ipsum dolor sit amet adipiscing elit. Nunc maximus, nec ut commodo." },
-];
+
 
 export const EventCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,14 +28,17 @@ export const EventCarousel = () => {
             <div className="slider-container">
                 <Swiper
                     cssMode={true}
-                    // spaceBetween={20}
-                    slidesPerView={3}
                     navigation={true}
                     pagination={true}
                     mousewheel={true}
                     keyboard={true}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                     className="mySwiper"
+                    breakpoints={{
+                        320: { slidesPerView: 1 },
+                        600: { slidesPerView: 2 }, 
+                        768: { slidesPerView: 3 } 
+                    }}
                 >{items.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider-item">

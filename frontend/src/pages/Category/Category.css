@@ -48,8 +48,6 @@
     height: 150px;
     justify-self: flex-end; 
     border: solid 2px whitesmoke;
-    
-    
   }
   .card-container p{
     flex-grow: 1;
@@ -81,20 +79,21 @@
       transform: translateY(2px);
   }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .search-container {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         gap: 1rem;
+    }
 
-
+    .main-container img{
+      width: 80%;
+      height: 70%;
     }
 
     .search-container input,
     .search-container button {
-        width: 100%;
-        /* Full width */
         min-width: 400px;
-        /* Adjust max width */
+        width: 100%;
     }
 }
