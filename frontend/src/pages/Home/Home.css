@@ -2,10 +2,8 @@
     text-align: center;
 }
 
-/* Carousel Styles */
 .carousel-item {
     height: 100vh;
-    /* Fixed height for carousel */
 }
 
 .carousel-image-container {
@@ -20,7 +18,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures the image covers the container without distortion */
 }
 
 .carousel-caption {
@@ -29,10 +26,8 @@
     border-radius: 10px;
 }
 
-/* Card Styles */
 .card-image-container {
     height: 200px;
-    /* Fixed height for card images */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -43,7 +38,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures the image covers the container without distortion */
 }
 
 .hover {
@@ -52,10 +46,8 @@
 
 .hover:hover {
     transform: translate(0, -1%);
-    /* transform: rotateZ(360deg); */
 }
 
-/* Footer Styles */
 footer {
     margin-top: 50px;
 }
