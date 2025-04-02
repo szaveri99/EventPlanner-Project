@@ -7,10 +7,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { VendorsModule } from './vendors/vendors.module';
 import { PlaceDetailsModule } from './place_details/place_details.module';
 import { ReviewsModule } from './reviews/reviews.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({isGlobal: true}),
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
       useFactory: () => ({
         type: 'postgres',
@@ -27,7 +28,8 @@ import { ReviewsModule } from './reviews/reviews.module';
     UsersModule,
     VendorsModule,
     PlaceDetailsModule,
-    ReviewsModule],
+    ReviewsModule,
+    CategoriesModule],
   controllers: [AppController],
   providers: [AppService],
 })

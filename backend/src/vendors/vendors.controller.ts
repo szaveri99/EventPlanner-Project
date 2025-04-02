@@ -5,30 +5,31 @@ import { UpdateVendorDto } from './dto/update-vendor.dto';
 
 @Controller('vendors')
 export class VendorsController {
-  constructor(private readonly vendorsService: VendorsService) {}
+  constructor(private readonly vendorsService: VendorsService) { }
 
   @Post()
   create(@Body() createVendorDto: CreateVendorDto) {
-    return this.vendorsService.create(createVendorDto);
+    return this.vendorsService.createVendor(createVendorDto);
+  }
+
+  @Get(':vendorId')
+  async getVendor(@Param('vendorId') vendorId: number) {
+    return this.vendorsService.getVendorById(vendorId);
   }
 
   @Get()
-  findAll() {
-    return this.vendorsService.findAll();
+  async getAllVendors() {
+    return this.vendorsService.getAllVendors();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.vendorsService.findOne(+id);
+  @Patch(':vendorId')
+  update(@Param('vendorId') vendorId: number, @Body() updateVendorDto: UpdateVendorDto) {
+    return this.vendorsService.updateVendor(vendorId, updateVendorDto);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateVendorDto: UpdateVendorDto) {
-    return this.vendorsService.update(+id, updateVendorDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.vendorsService.remove(+id);
+  @Delete(':vendorId')
+  remove(@Param('vendorId') vendorId: number) {
+    return this.vendorsService.deleteVendor(vendorId);
   }
 }
+
