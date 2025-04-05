@@ -9,7 +9,6 @@ import {homeEvents} from '../../dammyData'
 const Home = () => {
   return (
     <div className="App">
-      {/* Carousel Section */}
       <Carousel>
         {homeEvents.map((event) => (
           <Carousel.Item key={event.id}>
@@ -29,7 +28,6 @@ const Home = () => {
         ))}
       </Carousel>
 
-      {/* Event Cards Section */}
       <Container className="mt-5">
         <h2 className="text-center mb-4">Upcoming homeEvents</h2>
         <Row>
@@ -56,7 +54,6 @@ const Home = () => {
 
       <section className="py-5">
         <div className="container">
-          {/* Headings */}
           <div className="text-center mb-5">
             <h1
               className="mb-3"
@@ -76,9 +73,7 @@ const Home = () => {
               Checkout these Tools Might be of your Interest
             </h2>
           </div>
-          {/* Cards Container */}
           <div className="row g-4">
-            {/* Vendors Card */}
             <div className="col-12 mb-4">
               <div
                 className="card border-0 rounded-4 position-relative overflow-hidden"
@@ -127,7 +122,6 @@ const Home = () => {
                         overflow: "hidden",
                       }}
                     >
-                      {/* Image container for Vendors */}
                       <div
                         className="w-100 h-100 position-absolute"
                         style={{
@@ -135,7 +129,6 @@ const Home = () => {
                           left: 0,
                         }}
                       >
-                        {/* Uncomment and add your image URL */}
                         <img
                           src="music-event.jpg"
                           alt="Vendors illustration"
@@ -152,7 +145,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* Planning Tools Card */}
+
             <div className="col-12">
               <div
                 className="card border-0 rounded-4 position-relative overflow-hidden"
@@ -171,7 +164,6 @@ const Home = () => {
                         overflow: "hidden",
                       }}
                     >
-                      {/* Image container for Planning Tools */}
                       <div
                         className="w-100 h-100 position-absolute"
                         style={{
@@ -179,7 +171,6 @@ const Home = () => {
                           left: 0,
                         }}
                       >
-                        {/* Uncomment and add your image URL */}
                         <img
                           src="event-themes-featured.jpg"
                           alt="Planning Tools illustration"

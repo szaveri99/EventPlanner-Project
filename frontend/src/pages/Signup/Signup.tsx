@@ -19,7 +19,7 @@ function SignUp() {
   const onSubmit = (data: BaseFormData | VendorFormData) => {
     console.log("Form Data:", data);
     alert("Form submitted successfully!");
-    reset(); // Reset form after submission
+    reset(); 
   };
 
   return (
@@ -32,7 +32,6 @@ function SignUp() {
           <h2 className="fw-bold">Create an account</h2>
           <p>Select vendor or user to setup your profile</p>
 
-          {/* Role Selection Buttons */}
           <div className="btn-group mb-3 d-flex align-items-center gap-4">
             <button
               className={`btn ${role === "vendor" ? "btn-dark" : "btn-light"}`}
@@ -59,7 +58,6 @@ function SignUp() {
             </button>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="w-100">
             {role === "vendor" ? (
 
@@ -75,7 +73,6 @@ function SignUp() {
 
             )}
 
-            {/* Checkbox */}
             <div className="d-flex align-items-center mb-3">
               <input
                 type="checkbox"
@@ -90,13 +87,11 @@ function SignUp() {
               <p className="text-danger">{(errors.terms)?.message}</p>
             )}
 
-            {/* Submit Button */}
             <button type="submit" className="btn btn-secondary w-100">
               Sign Up
             </button>
           </form>
 
-          {/* Login Link */}
           <p className="mt-3">
             Already have an account? <Link to="/login">Log In</Link>
           </p>
@@ -104,7 +99,6 @@ function SignUp() {
         </div>
       </div>
 
-      {/* Right Side Branding */}
 
       <div
         className="col-md-6 d-flex align-items-center justify-content-center text-white bg-image"

@@ -5,11 +5,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import {events} from '../../dammyData' 
 import {stats} from '../../dammyData' 
-
-
 import "./About.css";
-
-
 
 const About = () => {
   const { ref, inView } = useInView({

@@ -29,7 +29,6 @@ function Login() {
           <p>Go ahead and login below</p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="w-100">
-            {/* Email Input */}
             <input
               type="email"
               className="form-control mb-3"
@@ -46,7 +45,6 @@ function Login() {
               <p className="text-danger">{errors.email.message}</p>
             )}
 
-            {/* Password Input */}
             <input
               type="password"
               className="form-control mb-3"
@@ -63,7 +61,6 @@ function Login() {
               <p className="text-danger">{errors.password.message}</p>
             )}
 
-            {/* Forgot Password */}
             <p
               className="text-primary cursor-pointer"
               style={{ width: "fit-content", cursor: "pointer" }}
@@ -89,13 +86,11 @@ function Login() {
               <p className="text-danger">{(errors.terms as any)?.message}</p>
             )}
 
-            {/* Login Button */}
             <button type="submit" className="btn btn-secondary w-100">
               Login
             </button>
           </form>
 
-          {/* Signup Link */}
           <p className="mt-3">
             Don't have an account?{" "}
             <Link to="/signup" className="text-decoration-none">
@@ -105,7 +100,6 @@ function Login() {
         </div>
       </div>
 
-      {/* Right Side Branding */}
       <div
         className="col-md-6 d-flex align-items-center justify-content-center text-white bg-image"
         style={{
@@ -127,7 +121,6 @@ function Login() {
         </div>
       </div>
 
-      {/* Forgot Password Modal */}
       {showModal && (
         <ForgotPasswordModal
           show={showModal}
