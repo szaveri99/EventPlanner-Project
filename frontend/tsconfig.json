@@ -17,5 +17,5 @@
     "noImplicitAny": false
   },
   "include": ["src"],
-  "exclude": ["node_modules","src/dammyData.js"]
+  "exclude": ["node_modules"]
 }

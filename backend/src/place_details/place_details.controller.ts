@@ -7,27 +7,27 @@ import { UpdatePlaceDetailDto } from './dto/update-place_detail.dto';
 export class PlaceDetailsController {
   constructor(private readonly placeDetailsService: PlaceDetailsService) {}
 
-  @Post()
+  @Post('/add-place')
   create(@Body() createPlaceDetailDto: CreatePlaceDetailDto) {
     return this.placeDetailsService.create(createPlaceDetailDto);
   }
 
-  @Get()
+  @Get('/all-places')
   findAll() {
     return this.placeDetailsService.findAll();
   }
 
-  @Get(':id')
+  @Get('/single-place/:id')
   findOne(@Param('id') id: string) {
     return this.placeDetailsService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Patch('/update-place/:id')
   update(@Param('id') id: string, @Body() updatePlaceDetailDto: UpdatePlaceDetailDto) {
     return this.placeDetailsService.update(+id, updatePlaceDetailDto);
   }
 
-  @Delete(':id')
+  @Delete('/delete-place/:id')
   remove(@Param('id') id: string) {
     return this.placeDetailsService.remove(+id);
   }

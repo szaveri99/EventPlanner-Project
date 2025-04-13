@@ -3,7 +3,7 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
-  OneToMany,
+  OneToMany,  
 } from 'typeorm';
 import { User } from 'src/users/entities/user.entity';
 import { PlaceDetail } from 'src/place_details/entities/place_detail.entity';
